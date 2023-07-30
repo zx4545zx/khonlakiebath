@@ -8,7 +8,6 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
-import ModeEditIcon from '@mui/icons-material/ModeEdit';
 import { useCalStore } from "../store";
 
 export default function BasicTable() {
@@ -26,22 +25,23 @@ export default function BasicTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-        {list?.map((v, i) => {
-          return (
-          <TableRow key={i}>
-            <TableCell align="left">{v?.name}</TableCell>
-            <TableCell align="center">{v?.price}</TableCell>
-            <TableCell align="center">
-            <IconButton
-              aria-label="delete"
-              color="error"
-              onClick={() => removeList(i)}
-              >
-              <DeleteIcon />
-            </IconButton>
-            </TableCell>
-          </TableRow>
-        )})}
+          {list?.map((v, i) => {
+            return (
+              <TableRow key={i}>
+                <TableCell align="left">{v?.name}</TableCell>
+                <TableCell align="center">{v?.price}</TableCell>
+                <TableCell align="center">
+                  <IconButton
+                    aria-label="delete"
+                    color="error"
+                    onClick={() => removeList(i)}
+                  >
+                    <DeleteIcon />
+                  </IconButton>
+                </TableCell>
+              </TableRow>
+            )
+          })}
         </TableBody>
       </Table>
     </TableContainer>

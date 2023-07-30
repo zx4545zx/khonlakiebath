@@ -7,7 +7,7 @@ import TextField from '@mui/material/TextField';
 import Divider from '@mui/material/Divider';
 import nameData from "../data/name.json";
 import priceData from "../data/price.json";
-import { useNavStore, useCalStore } from "../store";
+import { useCalStore } from "../store";
 
 const Home = () => {
   const dis = useCalStore((state) => state.dis);

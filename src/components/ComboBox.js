@@ -2,7 +2,7 @@ import * as React from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 
-export default function ComboBox({label="", data=[], value, setValue }) {
+export default function ComboBox({ label = "", data = [], value, setValue }) {
   return (
     <Autocomplete
       freeSolo
