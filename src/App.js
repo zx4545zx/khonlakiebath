@@ -4,6 +4,7 @@ import Container from "@mui/material/Container";
 import Home from "./pages/home";
 import Button from '@mui/material/Button';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import Fab from '@mui/material/Fab';
 
 function App() {
   return (
@@ -14,14 +15,17 @@ function App() {
       </Container>
       <div className="btNav">
         <Container maxWidth="sm" sx={{ p: "1rem" }}>
-          <Button
-            variant="contained"
-            sx={{ width: "100%" }}
-            color="primary"
-            startIcon={<AutoAwesomeIcon />}
-            >
-            คำนวณ
-          </Button>
+          <Fab variant="extended" color="primary" aria-label="add"
+          style={{
+            margin: 0,
+            top: 'auto',
+            right: 20,
+            bottom: 20,
+            left: 'auto',
+            position: 'fixed',
+          }}>
+            <AutoAwesomeIcon sx={{ mr: 1 }} /> คำนวณ
+          </Fab>
         </Container>
       </div>
     </div>
@@ -29,3 +33,14 @@ function App() {
 }
 
 export default App;
+
+
+// <Button
+//   variant="contained"
+//   sx={{ width: "100%" }}
+//   color="primary"
+//   size="large"
+//   startIcon={<AutoAwesomeIcon />}
+//   >
+//   คำนวณ
+// </Button>
